@@ -13,8 +13,9 @@
 <meta property="og:url" content="https://bkar1226.github.io/">
 <style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <title>박봉경 · 이아라 청첩장</title>
+<link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap">
 <style>
 /* Layout: one 460px column on warm linen; photo bands bleed to the column edge, text sections breathe in between.
    Single-theme by choice (a printed-card look), so no dark palette. */
@@ -27,18 +28,18 @@
   --mute: #A89E93;       /* labels, off-month days */
   --taupe: #6E6156;      /* wedding-day dot, buttons */
   --paper: #FFFFFF;
-  --sans: "Noto Sans KR", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --sans: "MaruBuri", "Nanum Myeongjo", "AppleMyungjo", serif;
   --script: "Cormorant Garamond", "Times New Roman", serif;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
 html, body { touch-action: pan-x pan-y; }
-body { background: var(--sand); color: var(--text); font-family: var(--sans); font-weight: 400; font-size: 15px; line-height: 1.75; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+body { background: var(--sand); color: var(--text); font-family: var(--sans); font-weight: 400; font-size: 15px; line-height: 1.9; letter-spacing: -.01em; -webkit-font-smoothing: antialiased; word-break: keep-all; }
 .card { max-width: 460px; margin: 0 auto; background: var(--linen); overflow: hidden; }
 .pad { padding-left: max(28px, env(safe-area-inset-left, 0px)); padding-right: max(28px, env(safe-area-inset-right, 0px)); }
 section { padding-block: 64px; }
 .eyebrow { font-family: var(--script); font-style: italic; font-size: 17px; color: var(--mute); letter-spacing: .02em; text-align: center; margin: 0 0 4px; }
-h2 { font-size: 18px; font-weight: 600; color: var(--ink); text-align: center; margin: 0 0 28px; text-wrap: balance; }
+h2 { font-size: 20px; letter-spacing: .01em; font-weight: 400; color: var(--ink); text-align: center; margin: 0 0 28px; text-wrap: balance; }
 .rule { width: 44px; height: 1px; background: var(--oat); margin: 32px auto; border: 0; }
 button { font: inherit; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
@@ -55,7 +56,7 @@ button { font: inherit; cursor: pointer; }
 .cover .ph img { object-position: center 70%; }
 .cover-text { text-align: center; padding-block: 44px 28px; }
 .cover-text .eyebrow { color: #8E8276; }
-.cover-names { font-size: 22px; font-weight: 600; color: var(--ink); letter-spacing: .04em; margin: 0; }
+.cover-names { font-size: 24px; font-weight: 400; color: var(--ink); letter-spacing: .04em; margin: 0; }
 .sample { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); z-index: 1; font-size: 11px; color: var(--text); background: rgba(250,247,242,.85); border-radius: 99px; padding: 3px 12px; white-space: nowrap; }
 
 /* Date / venue line */
@@ -63,13 +64,13 @@ button { font: inherit; cursor: pointer; }
 .fact { display: flex; justify-content: space-between; gap: 16px; }
 .fact dt { color: var(--mute); }
 .fact dt { flex: none; }
-.fact dd { margin: 0; color: var(--ink); font-weight: 500; text-align: right; min-width: 0; white-space: nowrap; font-size: clamp(13px, 3.9vw, 15px); font-variant-numeric: tabular-nums; }
+.fact dd { margin: 0; color: var(--ink); font-weight: 400; text-align: right; min-width: 0; white-space: nowrap; font-size: clamp(13px, 3.9vw, 15px); font-variant-numeric: tabular-nums; }
 
 /* Greeting */
 .greeting { text-align: center; }
 .greeting p { margin: 0 0 18px; }
 .parents { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align: center; }
-.parents b { display: block; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.parents b { display: block; font-size: 17px; font-weight: 400; color: var(--ink); margin-bottom: 4px; }
 .parents span { font-size: 13.5px; }
 
 .band { background: var(--sand); }
@@ -94,38 +95,38 @@ button { font: inherit; cursor: pointer; }
 
 /* Calendar */
 .cal { text-align: center; }
-.cal-month { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0 0 20px; }
+.cal-month { font-size: 20px; font-weight: 400; color: var(--ink); margin: 0 0 20px; }
 .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 10px; font-variant-numeric: tabular-nums; }
-.cal-grid .dow { color: var(--mute); font-weight: 500; font-size: 14px; }
+.cal-grid .dow { color: var(--mute); font-weight: 400; font-size: 14px; }
 .cal-grid .dow.sun, .cal-grid .sun { color: #B98C80; }
 .cal-grid .day { height: 46px; display: flex; flex-direction: column; align-items: center; font-size: 15px; }
 .cal-grid .day span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; }
 .cal-grid .off { color: #D4CBC0; }
-.cal-grid .wd span { background: var(--taupe); color: var(--paper); font-weight: 600; }
-.cal-grid .wd small { font-size: 10.5px; font-weight: 600; color: var(--taupe); line-height: 1; margin-top: 2px; }
+.cal-grid .wd span { background: var(--taupe); color: var(--paper); font-weight: 700; }
+.cal-grid .wd small { font-size: 10.5px; font-weight: 400; color: var(--taupe); line-height: 1; margin-top: 2px; }
 .dday { margin: 0 0 18px; }
-.dday b { color: var(--ink); font-weight: 600; }
-.btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--oat); background: var(--paper); color: var(--ink); border-radius: 8px; padding: 10px 18px; font-size: 14px; font-weight: 500; text-decoration: none; box-shadow: 0 1px 2px rgba(62,56,51,.06); }
+.dday b { color: var(--ink); font-weight: 400; }
+.btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--oat); background: var(--paper); color: var(--ink); border-radius: 8px; padding: 10px 18px; font-size: 14px; font-weight: 400; text-decoration: none; box-shadow: 0 1px 2px rgba(62,56,51,.06); }
 .btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; }
 
 
 /* Location */
 .loc-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
-.loc-head h3 { margin: 0; font-size: 16px; font-weight: 600; color: var(--ink); }
+.loc-head h3 { margin: 0; font-size: 17px; font-weight: 400; color: var(--ink); }
 .btn.sm { padding: 7px 12px; font-size: 13px; }
 .addr { margin: 0; }
 .maps { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
 .maps .btn { justify-content: center; }
 .route { margin-top: 36px; }
-.route h3 { margin: 0 0 14px; font-size: 16px; font-weight: 600; color: var(--ink); }
+.route h3 { margin: 0 0 14px; font-size: 16px; font-weight: 400; color: var(--ink); }
 .route dl { margin: 0; display: grid; grid-template-columns: 64px 1fr; row-gap: 14px; }
-.route dt { font-weight: 600; color: var(--ink); }
+.route dt { font-weight: 400; color: var(--ink); }
 .route dd { margin: 0; min-width: 0; }
 
 /* Accounts */
 .acc-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: center; }
 .acc-sides p { margin: 0 0 8px; font-size: 14px; }
-.acc-sides b { color: var(--ink); font-weight: 600; }
+.acc-sides b { color: var(--ink); font-weight: 400; }
 .acc-sides .btn { width: 100%; justify-content: center; }
 .acc-sides .btn[aria-expanded="true"] { background: var(--taupe); color: var(--paper); border-color: var(--taupe); }
 .acc-list { margin-top: 16px; display: grid; gap: 8px; }
@@ -138,7 +139,7 @@ button { font: inherit; cursor: pointer; }
 
 /* Footer */
 footer { text-align: center; padding-block: 48px 64px; font-size: 13px; color: var(--mute); }
-footer .names { font-size: 15px; color: var(--ink); font-weight: 500; margin: 0 0 6px; }
+footer .names { font-size: 15px; color: var(--ink); font-weight: 400; margin: 0 0 6px; }
 
 /* Lightbox + toast */
 .toast { position: fixed; left: 50%; bottom: calc(28px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--linen); font-size: 13.5px; padding: 9px 18px; border-radius: 99px; z-index: 30; white-space: nowrap; }
@@ -206,11 +207,11 @@ const DATA = {
     ["주차", "주차가 혼잡할 수 있으니 대중교통 이용을 권해 드립니다.\nSUV·대형 세단은 주차가 어려울 수 있습니다."]
   ],
   accounts: {
-    groom: [ ["신랑", "박봉경", "신한은행", "110-212-181500"], ["아버지", "박종훈", "신한은행", "110-006-916133"], ["어머니", "황경순", "신한은행", "110-231-530855"] ],
-    bride: [ ["신부", "이아라", "우리은행", "1002165022357"], ["아버지", "이재욱", "하나은행", "391-911089-39607"], ["어머니", "김마리아", "농협", "232-02-022197"] ]
+    groom: [ ["신랑", "박봉경", "하나은행", "576-910079-10807"], ["아버지", "박종훈", "신한은행", "110-006-916133"], ["어머니", "황경순", "신한은행", "110-231-530855"] ],
+    bride: [ ["신부", "이아라", "우리은행", "1002-165-022357"], ["아버지", "이재욱", "하나은행", "391-911089-39607"], ["어머니", "김마리아", "농협은행", "232-02-022197"] ]
   },
   // gallery: [사진, 보이는 폭 %, 왼쪽 %, 위쪽 %]
-  photos: { cover: "img/main.jpg", gallery: [["img/g04.jpg", 111.11, -5.56, -11.11], ["img/g02.jpg", 142.86, -41.43, -14.29], ["img/g06.jpg", 100.0, -0.0, -0.0], ["img/g01.jpg", 138.89, -27.78, -33.28]] }
+  photos: { cover: "img/main.jpg", gallery: [["img/g04.jpg", 111.11, -5.56, -11.11], ["img/g02.jpg", 100, 0, 0], ["img/g06.jpg", 100.0, -0.0, -0.0], ["img/g01.jpg", 138.89, -27.78, -33.28]] }
 };
 /* =================================================================== */
 
