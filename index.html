@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="description" content="2026년 12월 26일 토요일 낮 12시 30분, 드레스가든 4층">
+<meta property="og:type" content="website">
+<meta property="og:title" content="박봉경 ♥ 이아라 결혼합니다">
+<meta property="og:description" content="12월 26일 토요일 낮 12시 30분 · 드레스가든 청담 4층">
+<meta property="og:image" content="https://bkar1226.github.io/img/og.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="400">
+<meta property="og:url" content="https://bkar1226.github.io/">
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>박봉경 · 이아라 청첩장</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap">
+<style>
+/* Layout: one 460px column on warm linen; photo bands bleed to the column edge, text sections breathe in between.
+   Single-theme by choice (a printed-card look), so no dark palette. */
+:root {
+  --linen: #FAF7F2;      /* page */
+  --sand: #F1EBE2;       /* banded sections */
+  --oat: #E6DDD0;        /* photo placeholder, lines */
+  --ink: #3E3833;        /* names, headings */
+  --text: #6A625A;       /* body */
+  --mute: #A89E93;       /* labels, off-month days */
+  --taupe: #6E6156;      /* wedding-day dot, buttons */
+  --paper: #FFFFFF;
+  --sans: "Noto Sans KR", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --script: "Cormorant Garamond", "Times New Roman", serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { touch-action: pan-x pan-y; }
+body { background: var(--sand); color: var(--text); font-family: var(--sans); font-weight: 400; font-size: 15px; line-height: 1.75; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+.card { max-width: 460px; margin: 0 auto; background: var(--linen); overflow: hidden; }
+.pad { padding-left: max(28px, env(safe-area-inset-left, 0px)); padding-right: max(28px, env(safe-area-inset-right, 0px)); }
+section { padding-block: 64px; }
+.eyebrow { font-family: var(--script); font-style: italic; font-size: 17px; color: var(--mute); letter-spacing: .02em; text-align: center; margin: 0 0 4px; }
+h2 { font-size: 18px; font-weight: 600; color: var(--ink); text-align: center; margin: 0 0 28px; text-wrap: balance; }
+.rule { width: 44px; height: 1px; background: var(--oat); margin: 32px auto; border: 0; }
+button { font: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
+
+/* Photo placeholders: linen-toned frames until real photos arrive */
+.ph { position: relative; background: linear-gradient(160deg, #EFE7DB, #E3D8C8); display: grid; place-items: center; max-width: 100%; }
+.ph::after { content: attr(data-label); font-size: 12px; letter-spacing: .08em; color: #A0907E; }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ph.has-img::after { content: none; }
+
+/* Cover */
+.cover { position: relative; }
+.cover .ph { aspect-ratio: 2 / 3; width: 100%; }
+.cover .ph img { object-position: center 70%; }
+.cover-text { text-align: center; padding-block: 44px 28px; }
+.cover-text .eyebrow { color: #8E8276; }
+.cover-names { font-size: 22px; font-weight: 600; color: var(--ink); letter-spacing: .04em; margin: 0; }
+.sample { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); z-index: 1; font-size: 11px; color: var(--text); background: rgba(250,247,242,.85); border-radius: 99px; padding: 3px 12px; white-space: nowrap; }
+
+/* Date / venue line */
+.facts { padding-block: 32px 8px; display: grid; gap: 6px; }
+.fact { display: flex; justify-content: space-between; gap: 16px; }
+.fact dt { color: var(--mute); }
+.fact dt { flex: none; }
+.fact dd { margin: 0; color: var(--ink); font-weight: 500; text-align: right; min-width: 0; white-space: nowrap; font-size: clamp(13px, 3.9vw, 15px); font-variant-numeric: tabular-nums; }
+
+/* Greeting */
+.greeting { text-align: center; }
+.greeting p { margin: 0 0 18px; }
+.parents { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align: center; }
+.parents b { display: block; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.parents span { font-size: 13.5px; }
+
+.band { background: var(--sand); }
+/* Gallery: a matted photo frame on the sand band; one photo at a time, swipe or arrows */
+.slider { display: grid; grid-template-columns: 36px minmax(0, 1fr) 36px; align-items: center; gap: 6px; max-width: 330px; margin: 0 auto; }
+.frame { background: var(--paper); padding: 10px 10px 12px; border-radius: 3px; box-shadow: 0 1px 2px rgba(62,56,51,.08), 0 10px 28px -10px rgba(62,56,51,.28); outline: 1px solid rgba(110,97,86,.10); outline-offset: -5px; min-width: 0; }
+.track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+.track::-webkit-scrollbar { display: none; }
+.slide { flex: 0 0 100%; scroll-snap-align: center; scroll-snap-stop: always; }
+.slide .ph { aspect-ratio: 2 / 3; width: 100%; overflow: hidden; }
+.slide .ph img { inset: auto; left: var(--l); top: var(--t); width: var(--w); height: auto; object-fit: initial; max-width: none; }
+.nav { position: relative; z-index: 2; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--oat); background: var(--paper); color: var(--taupe); font-size: 20px; line-height: 1; display: grid; place-items: center; padding: 0 0 2px; }
+.nav:disabled { opacity: .3; cursor: default; }
+.dots { display: flex; justify-content: center; gap: 8px; padding-block: 18px 0; }
+.dots button { width: 6px; height: 6px; padding: 0; border: 0; border-radius: 50%; background: #D6CBBE; transition: background .3s, transform .3s; }
+.dots button[aria-current="true"] { background: var(--taupe); transform: scale(1.3); }
+.gallery-title { margin-bottom: 20px; }
+/* Photos can't be dragged, long-pressed to save, or selected */
+.ph, .ph img { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-user-drag: none; }
+.ph img { pointer-events: none; }
+.ph::before { content: ""; position: absolute; inset: 0; z-index: 1; }
+
+/* Calendar */
+.cal { text-align: center; }
+.cal-month { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0 0 20px; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 10px; font-variant-numeric: tabular-nums; }
+.cal-grid .dow { color: var(--mute); font-weight: 500; font-size: 14px; }
+.cal-grid .dow.sun, .cal-grid .sun { color: #B98C80; }
+.cal-grid .day { height: 46px; display: flex; flex-direction: column; align-items: center; font-size: 15px; }
+.cal-grid .day span { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; }
+.cal-grid .off { color: #D4CBC0; }
+.cal-grid .wd span { background: var(--taupe); color: var(--paper); font-weight: 600; }
+.cal-grid .wd small { font-size: 10.5px; font-weight: 600; color: var(--taupe); line-height: 1; margin-top: 2px; }
+.dday { margin: 0 0 18px; }
+.dday b { color: var(--ink); font-weight: 600; }
+.btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--oat); background: var(--paper); color: var(--ink); border-radius: 8px; padding: 10px 18px; font-size: 14px; font-weight: 500; text-decoration: none; box-shadow: 0 1px 2px rgba(62,56,51,.06); }
+.btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+
+
+/* Location */
+.loc-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.loc-head h3 { margin: 0; font-size: 16px; font-weight: 600; color: var(--ink); }
+.btn.sm { padding: 7px 12px; font-size: 13px; }
+.addr { margin: 0; }
+.maps { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+.maps .btn { justify-content: center; }
+.route { margin-top: 36px; }
+.route h3 { margin: 0 0 14px; font-size: 16px; font-weight: 600; color: var(--ink); }
+.route dl { margin: 0; display: grid; grid-template-columns: 64px 1fr; row-gap: 14px; }
+.route dt { font-weight: 600; color: var(--ink); }
+.route dd { margin: 0; min-width: 0; }
+
+/* Accounts */
+.acc-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: center; }
+.acc-sides p { margin: 0 0 8px; font-size: 14px; }
+.acc-sides b { color: var(--ink); font-weight: 600; }
+.acc-sides .btn { width: 100%; justify-content: center; }
+.acc-sides .btn[aria-expanded="true"] { background: var(--taupe); color: var(--paper); border-color: var(--taupe); }
+.acc-list { margin-top: 16px; display: grid; gap: 8px; }
+.acc { background: var(--paper); border: 1px solid var(--oat); border-radius: 10px; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.acc div { min-width: 0; font-size: 14px; line-height: 1.55; }
+.acc .who { color: var(--mute); font-size: 12.5px; }
+.acc .num { color: var(--ink); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+
+.note { font-size: 12px; color: var(--mute); margin-top: 10px !important; }
+
+/* Footer */
+footer { text-align: center; padding-block: 48px 64px; font-size: 13px; color: var(--mute); }
+footer .names { font-size: 15px; color: var(--ink); font-weight: 500; margin: 0 0 6px; }
+
+/* Lightbox + toast */
+.toast { position: fixed; left: 50%; bottom: calc(28px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--linen); font-size: 13.5px; padding: 9px 18px; border-radius: 99px; z-index: 30; white-space: nowrap; }
+
+/* Motion: slow zoom on the cover, names drift in, sections rise on scroll, petals fall */
+.cover .ph { overflow: hidden; }
+#petals { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
+/* Cover zoom runs for everyone; phones with reduced motion get a slower, smaller version */
+.cover .ph img { animation: drift 14s ease-in-out infinite alternate; transform-origin: 55% 60%; }
+@keyframes drift { from { transform: scale(1); } to { transform: scale(1.09) translateY(-1.5%); } }
+@keyframes driftSoft { from { transform: scale(1); } to { transform: scale(1.04); } }
+@media (prefers-reduced-motion: reduce) { .cover .ph img { animation: driftSoft 24s ease-in-out infinite alternate; } }
+@media (prefers-reduced-motion: no-preference) {
+  .cover-text > * { animation: appear 1.4s ease both; }
+  .cover-text > *:nth-child(2) { animation-delay: .35s; }
+  @keyframes appear { from { opacity: 0; transform: translateY(10px); letter-spacing: .14em; } to { opacity: 1; transform: none; } }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+}
+</style>
+
+<script>
+/* ?debug=1: an on-screen panel for checking in-app browsers. Loaded first so it can catch errors in the main script. */
+(function () {
+  if (!/[?&]debug=1/.test(location.search)) return;
+  var errs = [], steps = [];
+  window.__dbgStep = function (s) { steps.push(s); };
+  window.__dbgErr = function (m) { errs.push(m); };
+  window.addEventListener("error", function (e) { errs.push((e.message || "error") + " @" + (e.lineno || "?") + ":" + (e.colno || "?")); });
+  window.addEventListener("unhandledrejection", function (e) { errs.push("promise: " + (e.reason && e.reason.message || e.reason)); });
+  function show() {
+    var box = document.getElementById("dbg");
+    if (!box) { box = document.createElement("pre"); box.id = "dbg"; box.style.cssText = "position:fixed;left:8px;right:8px;bottom:8px;z-index:99;background:rgba(0,0,0,.8);color:#fff;font:11px/1.45 monospace;padding:8px;border-radius:6px;white-space:pre-wrap;margin:0;max-height:45vh;overflow:auto"; (document.body || document.documentElement).appendChild(box); }
+    var img = document.querySelector(".cover img"), cs = img ? getComputedStyle(img) : {}, P = window.__petals || {};
+    var rm = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)").matches : "n/a";
+    box.textContent = "ver 2026-10-26a\nUA " + navigator.userAgent + "\nreduce " + rm +
+      "\ninner " + innerWidth + "x" + innerHeight + " canvas " + P.W + "x" + P.H + " petals " + (P.list && P.list.length) + " frames " + P.frames +
+      "\ncover anim " + cs.animationName + " " + cs.animationPlayState +
+      "\nsteps " + (steps.join(" > ") || "-") + "\nerrors " + (errs.join(" | ") || "none");
+  }
+  document.addEventListener("DOMContentLoaded", function () { show(); setInterval(show, 500); });
+})();
+</script>
+</head>
+<body>
+<main class="card" id="app"></main>
+<canvas id="petals" aria-hidden="true"></canvas>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+/* ===== 여기 정보만 바꾸면 청첩장 전체가 바뀝니다 (현재는 샘플 값) ===== */
+const DATA = {
+  sample: false,
+  groom: { name: "박봉경", father: "박종훈", mother: "황경순", rel: "아들" },
+  bride: { name: "이아라", father: "이재욱", mother: "김마리아", rel: "딸" },
+  date: "2026-12-26T12:30:00+09:00",
+  venue: { name: "드레스가든", hall: "4층", address: "서울특별시 강남구 청담동 영동대로 707", mapQuery: "드레스가든 청담" },
+  greeting: [
+    ["한 해의 끝자락,", "서로의 온기가 되어줄 두 사람이", "하나의 가정을 이루어", "새 시작을 하려 합니다."],
+    ["함께 자리하여 축복해 주시면", "더없는 기쁨으로 간직하겠습니다."]
+  ],
+  transport: [
+    ["지하철", "7호선 청담역 13번 출구, 도보 2분"],
+    ["버스", "청담역.경기고교 정류장 하차\n간선 143 · 146 · 345\n지선 2413 · 3217 · 4318\n직행좌석 9407 · 9507 · 9607"],
+    ["주차", "주차가 혼잡할 수 있으니 대중교통 이용을 권해 드립니다.\nSUV·대형 세단은 주차가 어려울 수 있습니다."]
+  ],
+  accounts: {
+    groom: [ ["신랑", "박봉경", "신한은행", "110-212-181500"], ["아버지", "박종훈", "신한은행", "110-006-916133"], ["어머니", "황경순", "신한은행", "110-231-530855"] ],
+    bride: [ ["신부", "이아라", "우리은행", "1002165022357"], ["아버지", "이재욱", "하나은행", "391-911089-39607"], ["어머니", "김마리아", "농협", "232-02-022197"] ]
+  },
+  // gallery: [사진, 보이는 폭 %, 왼쪽 %, 위쪽 %]
+  photos: { cover: "img/main.jpg", gallery: [["img/g04.jpg", 111.11, -5.56, -11.11], ["img/g02.jpg", 142.86, -41.43, -14.29], ["img/g06.jpg", 100.0, -0.0, -0.0], ["img/g01.jpg", 138.89, -27.78, -33.28]] }
+};
+/* =================================================================== */
+
+const $ = (s, el = document) => el.querySelector(s);
+const motionOK = !(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+const guard = (name, fn) => { try { fn(); } catch (e) { (window.__dbgErr || console.error)(name + ": " + (e && e.message)); } };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const ph = (src, label, cls = "") => `<div class="ph ${src ? "has-img" : ""} ${cls}" data-label="${esc(label)}">${src ? `<img src="${esc(src)}" alt="" ${cls.includes("eager") ? "" : 'loading="lazy"'}>` : ""}</div>`;
+const ICON = {
+  cal: '<svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>',
+  copy: '<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>',
+  pin: '<svg viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>',
+  clock: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>'
+};
+
+const d = new Date(DATA.date);
+const KST = new Date(d.getTime() + 9 * 3600e3); // 표시는 항상 한국 시간
+const Y = KST.getUTCFullYear(), M = KST.getUTCMonth(), D = KST.getUTCDate(), W = KST.getUTCDay();
+const H = KST.getUTCHours(), MI = KST.getUTCMinutes();
+const DOW = ["일", "월", "화", "수", "목", "금", "토"];
+const ampm = H < 12 ? "오전" : H < 14 ? "낮" : "오후", h12 = ((H + 11) % 12) + 1;
+const timeKo = `${ampm} ${h12}시${MI ? ` ${MI}분` : ""}`;
+const dateKo = `${Y}년 ${M + 1}월 ${D}일 ${DOW[W]}요일 ${timeKo}`;
+const dateShort = `${Y}. ${M + 1}. ${D}. (${DOW[W]}) ${timeKo}`;
+const G = DATA.groom, B = DATA.bride, V = DATA.venue;
+
+function calendarHTML() {
+  const first = new Date(Date.UTC(Y, M, 1)).getUTCDay();
+  const days = new Date(Date.UTC(Y, M + 1, 0)).getUTCDate();
+  const prevDays = new Date(Date.UTC(Y, M, 0)).getUTCDate();
+  let cells = DOW.map((x, i) => `<div class="dow ${i === 0 ? "sun" : ""}">${x}</div>`).join("");
+  const total = Math.ceil((first + days) / 7) * 7;
+  for (let i = 0; i < total; i++) {
+    const n = i - first + 1, col = i % 7;
+    if (n < 1) cells += `<div class="day off"><span>${prevDays + n}</span></div>`;
+    else if (n > days) cells += `<div class="day off"><span>${n - days}</span></div>`;
+    else cells += `<div class="day ${n === D ? "wd" : ""} ${col === 0 ? "sun" : ""}"><span>${n}</span>${n === D ? `<small>${H < 12 ? "AM" : "PM"} ${h12}:${String(MI).padStart(2, "0")}</small>` : ""}</div>`;
+  }
+  return cells;
+}
+function ddayText() {
+  const now = new Date(Date.now() + 9 * 3600e3);
+  const today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const diff = Math.round((Date.UTC(Y, M, D) - today) / 864e5);
+  if (diff > 0) return `${G.name}, ${B.name}의 결혼식이 <b>${diff}일</b> 남았습니다`;
+  if (diff === 0) return `오늘, <b>결혼식 날</b>입니다`;
+  return `<b>${-diff}일</b> 전, 두 사람이 부부가 되었습니다`;
+}
+function gcalLink() {
+  const fmt = t => new Date(t).toISOString().replace(/[-:]|\.\d{3}/g, "");
+  const p = new URLSearchParams({ action: "TEMPLATE", text: `${G.name} ♥ ${B.name} 결혼식`, dates: `${fmt(d)}/${fmt(d.getTime() + 2 * 3600e3)}`, location: `${V.name} ${V.hall}, ${V.address}` });
+  return "https://calendar.google.com/calendar/render?" + p.toString();
+}
+const accHTML = list => list.map(([role, name, bank, num]) => `
+  <div class="acc"><div><div class="who">${esc(role)} ${esc(name)}</div><div class="num">${num ? esc(bank + " " + num) : '<span style="color:var(--mute)">계좌번호 준비 중</span>'}</div></div>
+  ${num ? `<button class="btn sm" data-copy="${esc(bank + " " + num)}" data-msg="계좌번호를 복사했어요">${ICON.copy}복사</button>` : ""}</div>`).join("");
+
+$("#app").innerHTML = `
+<header class="cover">
+  <div class="cover-text"><p class="eyebrow">The First Day of Us</p><h1 class="cover-names">${esc(G.name)} · ${esc(B.name)}</h1></div>
+  ${ph(DATA.photos.cover, "메인 사진", "eager")}
+  ${DATA.sample ? '<span class="sample">샘플 시안 · 실제 정보와 사진으로 바뀝니다</span>' : ""}
+</header>
+
+<dl class="facts pad">
+  <div class="fact"><dt>일시</dt><dd>${dateShort}</dd></div>
+  <div class="fact"><dt>장소</dt><dd>${esc(V.name)} ${esc(V.hall)}</dd></div>
+</dl>
+
+<section class="greeting pad">
+  <p class="eyebrow">Invitation</p>
+  ${DATA.greeting.map(lines => `<p>${lines.map(esc).join("<br>")}</p>`).join("")}
+  <hr class="rule">
+  <div class="parents">
+    <div><b>${esc(G.name)}</b><span>${esc(G.father)} · ${esc(G.mother)}의 ${esc(G.rel)}</span></div>
+    <div><b>${esc(B.name)}</b><span>${esc(B.father)} · ${esc(B.mother)}의 ${esc(B.rel)}</span></div>
+  </div>
+</section>
+
+<section class="gallery-wrap band pad">
+  <p class="eyebrow gallery-title">Gallery</p>
+  <div class="slider" aria-roledescription="carousel" aria-label="사진">
+    <button class="nav prev" id="prevBtn" type="button" aria-label="이전 사진">‹</button>
+    <div class="frame"><div class="track" id="track"></div></div>
+    <button class="nav next" id="nextBtn" type="button" aria-label="다음 사진">›</button>
+  </div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<section class="cal pad">
+  <p class="eyebrow">Wedding Day</p>
+  <p class="cal-month">${Y}년 ${M + 1}월</p>
+  <div class="cal-grid">${calendarHTML()}</div>
+  <hr class="rule">
+  <p class="dday">${ddayText()}</p>
+  <a class="btn" href="${gcalLink()}" target="_blank" rel="noopener">${ICON.cal}내 캘린더에 저장하기</a>
+</section>
+
+
+<section class="pad">
+  <p class="eyebrow">Location</p>
+  <h2>오시는 길</h2>
+  <div class="loc-head"><h3>${esc(V.name)} ${esc(V.hall)}</h3><button class="btn sm" data-copy="${esc(V.address)}" data-msg="주소를 복사했어요">${ICON.copy}주소 복사</button></div>
+  <p class="addr">${esc(V.address)}</p>
+  <div class="maps">
+    <a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/${encodeURIComponent(V.mapQuery || V.name)}">${ICON.pin}네이버 지도</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://map.kakao.com/link/search/${encodeURIComponent(V.mapQuery || V.name)}">${ICON.pin}카카오맵</a>
+  </div>
+  <div class="route"><dl>${DATA.transport.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v).replace(/\n/g, "<br>")}</dd>`).join("")}</dl></div>
+</section>
+
+
+<section class="pad">
+  <p class="eyebrow">With Gratitude</p>
+  <h2>마음 전하실 곳</h2>
+  <div class="acc-sides">
+    <div><p><b>신랑측</b></p><button class="btn" data-side="groom" aria-expanded="false" id="accGroomBtn">계좌번호 보기</button></div>
+    <div><p><b>신부측</b></p><button class="btn" data-side="bride" aria-expanded="false" id="accBrideBtn">계좌번호 보기</button></div>
+  </div>
+  <div class="acc-list" id="accList" hidden></div>
+</section>
+
+<footer class="band pad">
+  <p class="names">${esc(G.name)} · ${esc(B.name)}</p>
+  ${Y}. ${String(M + 1).padStart(2, "0")}. ${String(D).padStart(2, "0")}. ${DOW[W]}요일 ${timeKo}
+</footer>`;
+
+window.__dbgStep && __dbgStep("render");
+/* Gallery slider */
+const photos = DATA.photos.gallery;
+const track = $("#track");
+track.innerHTML = photos.map(([src, w, l, t], i) => `<div class="slide" aria-label="${i + 1} / ${photos.length}" style="--w:${w}%;--l:${l}%;--t:${t}%">${ph(src, `사진 ${i + 1}`)}</div>`).join("");
+$("#dots").innerHTML = photos.map((_, i) => `<button type="button" aria-label="${i + 1}번째 사진"></button>`).join("");
+const dots = [...document.querySelectorAll("#dots button")];
+let cur = 0;
+function setCur(i) {
+  cur = i;
+  dots.forEach((d, k) => d.setAttribute("aria-current", String(k === i)));
+  $("#prevBtn").disabled = i === 0;
+  $("#nextBtn").disabled = i === photos.length - 1;
+}
+function go(i) { i = Math.max(0, Math.min(photos.length - 1, i)); track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" }); setCur(i); }
+track.addEventListener("scroll", () => { const i = Math.round(track.scrollLeft / track.clientWidth); if (i !== cur) setCur(i); }, { passive: true });
+$("#prevBtn").onclick = () => go(cur - 1);
+$("#nextBtn").onclick = () => go(cur + 1);
+dots.forEach((d, i) => d.onclick = () => go(i));
+setCur(0);
+
+window.__dbgStep && __dbgStep("gallery");
+guard("accounts", () => {
+/* Accounts toggle */
+let openSide = null;
+document.querySelectorAll("[data-side]").forEach(btn => btn.addEventListener("click", () => {
+  const side = btn.dataset.side;
+  openSide = openSide === side ? null : side;
+  document.querySelectorAll("[data-side]").forEach(b => b.setAttribute("aria-expanded", String(b.dataset.side === openSide)));
+  $("#accList").hidden = !openSide;
+  if (openSide) $("#accList").innerHTML = accHTML(DATA.accounts[openSide]);
+}));
+
+});
+window.__dbgStep && __dbgStep("accounts");
+guard("reveal", () => {
+/* Scroll reveal: only things below the first screen wait to rise */
+if (motionOK && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll("#app > section, #app > .facts, #app > footer, .gallery-wrap").forEach((el, i) => {
+    if (el.getBoundingClientRect().top < innerHeight) return;
+    el.classList.add("reveal");
+    io.observe(el);
+  });
+}
+
+});
+window.__dbgStep && __dbgStep("reveal");
+guard("petals", () => {
+/* Falling petals */
+(function petals() {
+  const cv = $("#petals"); if (!cv.getContext) { cv.hidden = true; return; }
+  const soft = !motionOK; // reduced-motion phones: fewer, slower petals
+  const ctx = cv.getContext("2d");
+  const COLORS = ["#F4DDD6", "#EFD3C8", "#FBEFEA", "#F7E6DC", "#FFFFFF"];
+  let W, H, dpr, list = [], running = true, last = 0;
+  // In-app browsers (KakaoTalk on iPhone) can report a 0×0 viewport while the page is still opening,
+  // so read several sources and re-measure until a real size arrives.
+  function size() {
+    const de = document.documentElement;
+    const w = innerWidth || de.clientWidth || (screen && screen.width) || 390;
+    const h = innerHeight || de.clientHeight || (screen && screen.height) || 844;
+    const grew = !W || w > W * 1.5;
+    dpr = Math.min(devicePixelRatio || 1, 2); W = w; H = h;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (grew) list.forEach(p => { p.x = Math.random() * W; p.y = Math.random() * H; });
+  }
+  const N = () => Math.round(Math.min(26, Math.max(14, W / 22)) * (soft ? .5 : 1));
+  function make(top) {
+    return { x: Math.random() * W, y: top ? -20 - Math.random() * H * 0.3 : Math.random() * H,
+      r: 5 + Math.random() * 6, vy: (18 + Math.random() * 22) * (soft ? .6 : 1), sway: 14 + Math.random() * 26, ph: Math.random() * 6.28,
+      rot: Math.random() * 6.28, vr: (Math.random() - .5) * (soft ? .6 : 1.4), flip: Math.random() * 6.28,
+      c: COLORS[(Math.random() * COLORS.length) | 0], a: .55 + Math.random() * .35 };
+  }
+  function petal(p) {
+    ctx.save(); ctx.translate(p.x + Math.sin(p.ph) * p.sway, p.y); ctx.rotate(p.rot);
+    ctx.scale(1, Math.abs(Math.cos(p.flip)) * .7 + .3);
+    ctx.globalAlpha = p.a; ctx.fillStyle = p.c;
+    ctx.shadowColor = "rgba(150,110,95,.18)"; ctx.shadowBlur = 3;
+    ctx.beginPath(); ctx.moveTo(0, -p.r);
+    ctx.bezierCurveTo(p.r * .9, -p.r * .6, p.r * .7, p.r * .7, 0, p.r);
+    ctx.bezierCurveTo(-p.r * .7, p.r * .7, -p.r * .9, -p.r * .6, 0, -p.r);
+    ctx.fill(); ctx.restore();
+  }
+  let frames = 0;
+  function frame(t) {
+    if (!running) return;
+    frames++;
+    const dt = Math.min(.05, (t - last) / 1000 || 0); last = t;
+    ctx.clearRect(0, 0, W, H);
+    for (const p of list) {
+      p.y += p.vy * dt; p.ph += dt * .9; p.rot += p.vr * dt; p.flip += dt * 1.6;
+      if (p.y > H + 20) Object.assign(p, make(true));
+      petal(p);
+    }
+    requestAnimationFrame(frame);
+  }
+  const refit = () => { size(); while (list.length < N()) list.push(make(true)); list.length = N(); };
+  size(); list = Array.from({ length: N() }, () => make(false));
+  addEventListener("resize", refit);
+  addEventListener("orientationchange", () => setTimeout(refit, 300));
+  addEventListener("load", refit);
+  [300, 1000, 2500].forEach(t => setTimeout(refit, t));
+  if (window.visualViewport) visualViewport.addEventListener("resize", refit);
+  document.addEventListener("visibilitychange", () => { running = !document.hidden; if (running) { last = performance.now(); requestAnimationFrame(frame); } });
+  requestAnimationFrame(frame);
+  window.__petals = { list, get W() { return W; }, get H() { return H; }, get frames() { return frames; } };
+})();
+
+});
+window.__dbgStep && __dbgStep("petals");
+/* No pinch-zoom, no double-tap zoom, no long-press save on photos */
+guard("nozoom", () => {
+  ["gesturestart", "gesturechange", "gestureend"].forEach(t => document.addEventListener(t, e => e.preventDefault(), { passive: false }));
+  document.addEventListener("touchmove", e => { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
+  let lastTap = 0;
+  document.addEventListener("touchend", e => { const now = Date.now(); if (now - lastTap < 300 && !e.target.closest("input, select, button, a")) e.preventDefault(); lastTap = now; }, { passive: false });
+  document.addEventListener("contextmenu", e => { if (e.target.closest(".ph")) e.preventDefault(); });
+  document.addEventListener("dragstart", e => { if (e.target.closest(".ph")) e.preventDefault(); });
+});
+
+/* Copy + toast */
+let tt;
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(tt); tt = setTimeout(() => t.hidden = true, 1800); }
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-copy]"); if (!b) return;
+  const text = b.dataset.copy;
+  const fallback = () => { const ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand("copy"); } catch (_) {} ta.remove(); toast(ok ? b.dataset.msg : text); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => toast(b.dataset.msg), fallback); else fallback();
+});
+</script>
+
+</body>
+</html>
